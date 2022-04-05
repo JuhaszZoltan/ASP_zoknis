@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ASP_MVC_Template_FW.Models.Zokni>
+
+<div class="container">
+    <div class="row d-flex justify-content-center flex-nowrap">
+
+        @foreach (var zokni in Model)
+        {
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@zokni.Tipus</h5>
+                    <img src="~/Content/imgs/@zokni.Kep" class="card-img">
+                    <p class="card-text">A zokni adatai:</p>
+                    <div class="card-body text-white bg-dark">
+                        <p class="card-text">Készleten: @zokni.Keszlet</p>
+                        <p class="card-text">Like: @zokni.Like</p>
+                        <p class="card-text">Dislike: @zokni.DisLike</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="~/Home/Like/@zokni.ZokniId" class="btn btn-success" style="width: 6rem;">Like</a>
+                        <a href="~/Home/Dislike/@zokni.ZokniId" class="btn btn-danger" style="width: 6rem;">Dislike</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,23 @@
+﻿@model ASP_MVC_Template_FW.Models.Kolcsonzo
+
+<h2>Új kölcsönző adatai:</h2>
+
+
+@using (Html.BeginForm("UjKolcsonzo", "Home"))
+{
+    <div class="form-group">
+
+        <div class="md-3">
+            @Html.LabelFor(x => x.Nev, new { @class="form-label" })
+            @Html.TextBoxFor(x => x.Nev, null, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Nev)
+        </div>
+        <div class="md-3">
+            @Html.LabelFor(x => x.Email, new { @class = "form-label" })
+            @Html.TextBoxFor(x => x.Email, null, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Email)
+        </div>
+        <button class="btn btn-success" type="submit">Új kölcsönző</button>
+    </div>
+ }
+

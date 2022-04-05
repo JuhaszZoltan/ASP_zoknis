@@ -1,0 +1,13 @@
+﻿@model IEnumerable<ASP_MVC_Template_FW.Models.Zokni>
+
+@{ 
+    int zokniSum = Model.Sum(x => x.Keszlet);
+    int likeSum = Model.Sum(x => x.Like);
+}
+
+
+<div class="container-fluid fooldal">
+    <h2>Alkalmi zoknira van szükséged?</h2>
+    <h1>Mi segítünk!</h1>
+    <h3>Válassz @zokniSum zokni közül, @likeSum vásárló nem tévedhet! ;)</h3>
+</div>

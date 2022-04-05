@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ASP_MVC_Template_FW.Models.Kolcsonzo>
+
+<div class=container>
+    <h2>Kölcsönzők</h2>
+    <a href="~/Home/KolcsonzoForm" class="btn btn-success">Új kölcsönző hozzáadása</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Név</th>
+                <th>E-mail</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var k in Model)
+            {
+                <tr>
+                    <td>@k.KolcsonzoId</td>
+                    <td>@k.Nev</td>
+                    <td>@k.Email</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
